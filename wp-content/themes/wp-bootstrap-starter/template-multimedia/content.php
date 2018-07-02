@@ -21,9 +21,7 @@
   </div>
   <!-- end: card-title -->
 	<!-- start: imagen -->
-  <?php if (has_post_thumbnail()) {
-  	the_post_thumbnail();
-  }?>
+  <?php if ( has_post_thumbnail() ) { the_post_thumbnail(); }?>
 	<!-- end-imagen -->
 	<!-- start: card-body -->
   <div class="card-body">
