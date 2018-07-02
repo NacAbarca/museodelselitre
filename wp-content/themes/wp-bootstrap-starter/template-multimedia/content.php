@@ -7,9 +7,19 @@
  * @package WP_Bootstrap_Starter
  */
 ?>
-
 <!-- start: card -->
 <div id="post-<?php the_ID(); ?>" class="card">
+  <!-- start: card-title -->
+  <div class="card-header">
+    <?php
+    if ( is_single() ) :
+      the_title( '<h5 class="card-title">', '</h5>' );
+    else :
+      the_title( '<h5 class="card-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' );
+    endif;
+    ?>
+  </div>
+  <!-- end: card-title -->
 	<!-- start: imagen -->
   <?php if (has_post_thumbnail()) {
   	the_post_thumbnail();
@@ -23,15 +33,7 @@
 				'after'  => '</div>',
 			) );
 		?>
-		<!-- start: card-title -->
-		<?php
-		if ( is_single() ) :
-			the_title( '<h5 class="card-title">', '</h5>' );
-		else :
-			the_title( '<h5 class="card-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' );
-		endif;
-		?>
-		<!-- end: card-title -->
+
 		<!-- start: card-text -->
     <p class="card-text">
 			<?php
