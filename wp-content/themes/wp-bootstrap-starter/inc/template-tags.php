@@ -23,16 +23,17 @@ function wp_bootstrap_starter_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'wp-bootstrap-starter' ),
+		esc_html_x( 'Publicado el %s', 'post date', 'wp-bootstrap-starter' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'wp-bootstrap-starter' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		esc_html_x( 'por %s', 'post author', 'wp-bootstrap-starter' ),
+		'<a class="badge badge-primary fas fa-user" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '"> ' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span> | <span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on"><i aria-hidden class="fas fa-calendar-alt" title="Se fue publicado el" ></i> ' . $posted_on . '</span>';
+	echo' <span class="byline"><i aria-hidden class="fas fa-user" title="Publicado por el usuario"></i> ' . $byline . '</span>'; // WPCS: XSS OK.
 
     if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
         echo ' | <span class="comments-link"><i class="fa fa-comments" aria-hidden="true"></i> ';
@@ -42,6 +43,7 @@ function wp_bootstrap_starter_posted_on() {
     }
 
 }
+
 endif;
 
 if ( ! function_exists( 'wp_bootstrap_starter_entry_footer' ) ) :
@@ -68,10 +70,10 @@ function wp_bootstrap_starter_entry_footer() {
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'wp-bootstrap-starter' ),
+			esc_html__( 'Editar %s', 'wp-bootstrap-starter' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
-		' | <span class="edit-link">',
+		'<span class="edit-link text-right"><i aria-hidden class="fa fa-edit" title="Editar"></i> ',
 		'</span>'
 	);
 }

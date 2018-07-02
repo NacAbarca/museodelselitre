@@ -6,10 +6,7 @@
  *
  * @package WP_Bootstrap_Starter
  */
-
 ?>
-
-
 
 <!-- start: card -->
 <div id="post-<?php the_ID(); ?>" class="card">
@@ -59,5 +56,4 @@
 	<!-- end: card-footer -->
 </div>
 <!-- start: card -->
-<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 <br/>

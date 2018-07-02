@@ -14,18 +14,12 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wp-bootstrap-starter' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Pucha! Esa página no se puede encontrar', 'wp-bootstrap-starter' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
 					<p><?php esc_html_e( 'Parece que no se encontró nada en esta ubicación. ¿Tal vez intente uno de los siguientes enlaces o una búsqueda?', 'wp-bootstrap-starter' ); ?></p>
-
-					<?php
-						get_search_form();
-
-
-					?>
-
+					<?php get_search_form(); ?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
