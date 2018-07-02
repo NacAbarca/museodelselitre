@@ -1,0 +1,163 @@
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* VERSION: 1.2.40
+* STEP-1 START @ 08:13:52
+* NOTICE: Do NOT post this data to public sites or forums
+********************************************************************************
+PHP VERSION:	5.6.30 | SAPI: apache2handler
+PHP TIME LIMIT:	[0] time limit restriction disabled
+PHP MEMORY:	2048M | SUHOSIN: disabled
+SERVER:		Apache
+DOC ROOT:	/Users/Nac/localhost/museodelsalitre/sources
+DOC ROOT 755:	true
+LOG FILE 644:	true
+REQUEST URL:	http://museodelsalitre/installer.php
+SAFE MODE :	0
+--------------------------------------
+ARCHIVE EXTRACTION
+--------------------------------------
+NAME:	20180630_corporacionmuseodelsalitre_dev_9ca8eb86eeb2f3976567180701184526_archive.zip
+SIZE:	58.26MB
+ZIP:	Enabled (ZipArchive Support)
+
+>>> START EXTRACTION:
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 6247
+    [filename] => /Users/Nac/localhost/museodelsalitre/sources/20180630_corporacionmuseodelsalitre_dev_9ca8eb86eeb2f3976567180701184526_archive.zip
+    [comment] => 
+)
+File timestamp is 'Current' mode: 2018-07-01 20:13:56
+<<< EXTRACTION COMPLETE: true
+
+WEB SERVER CONFIGURATION FILE RESET:
+- Backup of .htaccess/web.config made to *.180701201356.orig
+- Reset of .htaccess/web.config files
+
+STEP-1 COMPLETE @ 08:13:56 - RUNTIME: 4.5097 sec.
+
+INSTALLER ERROR:
+The database "museodelsalitre" has "19" tables.  The Duplicator only works with an EMPTY database.  Enable the action "Connect and Remove All Data" radio button to remove all tables and or create a new database. Some hosting providers do not allow table removal from scripts.  In this case you will need to login to your hosting providers control panel and remove the tables manually.  Please contact your hosting provider for further details.  Always backup all your data before proceeding!
+
+
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* STEP-2 START @ 08:17:53
+* NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+--------------------------------------
+DATABASE ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.6.35 -- Build Server: 5.6.39
+FILE SIZE:	database.sql (1.17MB) - installer-data.sql (1.17MB)
+TIMEOUT:	5000
+MAXPACK:	16777216
+SQLMODE:	NO_ENGINE_SUBSTITUTION
+NEW SQL FILE:	[/Users/Nac/localhost/museodelsalitre/sources/installer-data.sql]
+COLLATE RESET:	On
+
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+ERRORS FOUND:	0
+TABLES DROPPED:	
+QUERIES RAN:	142
+
+wpuz_commentmeta: (0)
+wpuz_comments: (1)
+wpuz_duplicator_packages: (2)
+wpuz_links: (0)
+wpuz_options: (385)
+wpuz_postmeta: (1272)
+wpuz_posts: (459)
+wpuz_term_relationships: (85)
+wpuz_term_taxonomy: (23)
+wpuz_termmeta: (0)
+wpuz_terms: (23)
+wpuz_usermeta: (26)
+wpuz_users: (1)
+wpuz_wpmm_subscribers: (31)
+
+Removed '93' cache/transient rows
+
+CREATE/INSTALL RUNTIME: 0.6521 sec.
+STEP-2 COMPLETE @ 08:17:54 - RUNTIME: 0.7097 sec.
+
+
+********************************************************************************
+* DUPLICATOR-LITE: INSTALL-LOG
+* STEP-3 START @ 08:18:52
+* NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	utf8
+CHARSET CLIENT:	utf8
+--------------------------------------
+SERIALIZER ENGINE
+[*] scan every column
+[~] scan only text columns
+[^] no searchable columns
+--------------------------------------
+wpuz_commentmeta^ (0)
+wpuz_comments~ (1)
+wpuz_duplicator_packages^ (0)
+wpuz_links^ (0)
+wpuz_options~ (291)
+wpuz_postmeta~ (1272)
+wpuz_posts~ (459)
+wpuz_term_relationships~ (85)
+wpuz_term_taxonomy~ (23)
+wpuz_termmeta^ (0)
+wpuz_terms~ (23)
+wpuz_usermeta~ (26)
+wpuz_users~ (1)
+wpuz_wpmm_subscribers~ (31)
+--------------------------------------
+Search1:	'/home/museode2/public_html' 
+Change1:	'/Users/Nac/localhost/museodelsalitre/sources' 
+Search2:	'\/home\/museode2\/public_html' 
+Change2:	'\/Users\/Nac\/localhost\/museodelsalitre\/sources' 
+Search3:	'%2Fhome%2Fmuseode2%2Fpublic_html%2F' 
+Change3:	'%2FUsers%2FNac%2Flocalhost%2Fmuseodelsalitre%2Fsources%2F' 
+Search4:	'\home\museode2\public_html' 
+Change4:	'/Users/Nac/localhost/museodelsalitre/sources' 
+Search5:	'//www.museodelsalitre.cl' 
+Change5:	'//museodelsalitre' 
+Search6:	'\/\/www.museodelsalitre.cl' 
+Change6:	'\/\/museodelsalitre' 
+Search7:	'%2F%2Fwww.museodelsalitre.cl' 
+Change7:	'%2F%2Fmuseodelsalitre' 
+SCANNED:	Tables:14 	|	 Rows:2212 	|	 Cells:17516 
+UPDATED:	Tables:1 	|	 Rows:345 	|	 Cells:372 
+ERRORS:		0 
+RUNTIME:	0.364100 sec
+
+====================================
+CONFIGURATION FILE UPDATES:
+====================================
+
+UPDATED WP-CONFIG: /wp-config.php' (if present)
+
+WEB SERVER CONFIGURATION FILE BASIC SETUP:
+- Preparing .htaccess file with basic setup.
+Basic .htaccess file edit complete.  If using IIS web.config this process will need to be done manually.
+
+====================================
+GENERAL UPDATES & CLEANUP:
+====================================
+
+NEW WP-ADMIN USER: Username 'admin' already exists in the database.  Unable to create new account 
+
+- Created file wp-snapshots/index.php
+
+====================================
+NOTICES
+====================================
+
+NOTICE: The wp-config.php has the following values set [WPCACHEHOME]. 
+Please validate these values are correct in your wp-config.php file.  See the codex link for more details: https://codex.wordpress.org/Editing_wp-config.php
+
+STEP 3 COMPLETE @ 08:18:52 - RUNTIME: 0.3951 sec.
+
+
