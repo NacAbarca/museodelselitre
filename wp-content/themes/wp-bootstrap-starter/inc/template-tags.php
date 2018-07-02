@@ -29,11 +29,11 @@ function wp_bootstrap_starter_posted_on() {
 
 	$byline = sprintf(
 		esc_html_x( 'por %s', 'post author', 'wp-bootstrap-starter' ),
-		'<a class="badge badge-primary fas fa-user" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '"> ' . esc_html( get_the_author() ) . '</a></span>'
+		'<a class="badge badge-primary" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '"> ' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
 	echo '<span class="posted-on"><i aria-hidden class="fas fa-calendar-alt" title="Se fue publicado el" ></i> ' . $posted_on . '</span>';
-	echo' <span class="byline"><i aria-hidden class="fas fa-user" title="Publicado por el usuario"></i> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo' <span class="byline"><i aria-hidden class="fas fa-user" title="Publicado por el usuario '.esc_html( get_the_author() ).' "></i> ' . $byline . '</span>'; // WPCS: XSS OK.
 
     if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
         echo ' | <span class="comments-link"><i class="fa fa-comments" aria-hidden="true"></i> ';
