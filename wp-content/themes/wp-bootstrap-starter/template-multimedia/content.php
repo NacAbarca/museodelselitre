@@ -8,14 +8,14 @@
  */
 ?>
 <!-- start: card -->
-<div id="post-<?php the_ID(); ?>" class="card">
+<div id="post-<?php the_ID(); ?>" class="card border-dark">
   <!-- start: card-title -->
-  <div class="card-header">
+  <div class="card-header border-dark">
     <?php
     if ( is_single() ) :
-      the_title( '<h5 class="card-title">', '</h5>' );
+      the_title( '<h4 class="card-title">', '</h4>' );
     else :
-      the_title( '<h5 class="card-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' );
+      the_title( '<h4 class="card-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
     endif;
     ?>
   </div>
@@ -46,7 +46,7 @@
   </div>
 	<!-- end: card-body -->
 	<!-- start: card-footer -->
-	<div class="card-footer">
+	<div class="card-footer border-dark">
 		<div class="text-muted">
 			<?php wp_bootstrap_starter_posted_on();?>
 		</div>
