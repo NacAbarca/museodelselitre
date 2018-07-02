@@ -30,15 +30,17 @@
 	</header><!-- .entry-header -->
 	<div class="entry-content">
 		<?php
-        if ( is_single() ) :
-        	var_dump('<pre>, content-multimedia.php</pre>')
-			the_content();
+        if ( is_single() ) :?>
+				<div class="row">
+					<?php echo get_the_term_list($post->ID,'tipo_de_archivo', '<i arias-hidden class="fas fa-chevron-right" title="Categoria de Exposición"></i>Exposición: ', ', ', '') ?>
+				</div>
+			<?php the_content();
         else :
             the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wp-bootstrap-starter' ) );
         endif;
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-bootstrap-starter' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Páginas:', 'wp-bootstrap-starter' ),
 				'after'  => '</div>',
 			) );
 		?>
