@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying archive noticias
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -8,8 +8,8 @@
  */
 
 get_header(); ?>
-	<h1>archivo-multimedia.php</h1>
-	<section id="primary" class="content-area col-sm-12 col-lg-12">
+
+	<section id="primary" class="content-area col-sm-12 col-lg-8">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_title( '<h1><span class="badge badge-info">', '</span></h1>' );
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
@@ -31,15 +31,15 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-multimedia/content', get_post_format() );
+				get_template_part( 'template-noticias/content', get_post_format() );
 
- 			endwhile;
+			endwhile;
 
- 			the_posts_navigation();
+			the_posts_navigation();
 
- 		else :
+		else :
 
- 			get_template_part( 'template-multimedia/content', 'none' );
+			get_template_part( 'template-noticias/content', 'none' );
 
 		endif; ?>
 
@@ -47,5 +47,5 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-// get_sidebar();
+get_sidebar();
 get_footer();

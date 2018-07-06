@@ -42,6 +42,9 @@
 			endif;
 			?>
 		</p>
+    <?php
+    echo get_the_term_list( $post->ID, 'tiponoticia', '<i class="fas fa-bars" ariashidden="true" title="Categoria"></i>', ' , ','');
+    ?>
 		<!-- end: card-text -->
   </div>
 	<!-- end: card-body -->
